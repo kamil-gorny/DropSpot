@@ -6,4 +6,7 @@
 <div class="flex justify-center items-center pt-12">
     <Logo/>
 </div>
-<slot></slot>
+
+<div class="container w-3/5 m-auto">
+    <slot></slot>
+</div>

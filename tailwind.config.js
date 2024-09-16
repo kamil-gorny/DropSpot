@@ -3,7 +3,8 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     fontFamily:{
-      sans: ['Futura', 'sans-serif'],
+      sans: ['Courier New', 'serif'],
+      logo: ['Futura', 'serif'],
     },
     extend: {}
   },
