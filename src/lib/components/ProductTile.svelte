@@ -1,9 +1,7 @@
 <script>
-    import tshirt from '$lib/images/tshirt.webp';
     export let name;
     export let price;
     export let image;
-    export let link;
 
 </script>
 <a href="{name}">
