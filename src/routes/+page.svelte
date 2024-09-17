@@ -8,8 +8,8 @@
 <Navigation/>
 
 <div class="grid grid-cols-3 gap-8">
-    {#each data.products as {name, price, image}}
-        <ProductTile image={image} name={name} price={price}/>
+    {#each data.products as {name, price, image, variants}}
+        <ProductTile image={variants[0].image} name={name} price={price}/>
     {/each}
 </div>
 </div>
