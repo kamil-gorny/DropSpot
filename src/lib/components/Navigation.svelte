@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import NavigationItem from "./NavigationItem.svelte";
 
 </script>
