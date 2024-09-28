@@ -1,5 +1,5 @@
 <div class="max-w-md mr-auto ml-auto h-screen flex flex-col">
-    <span class="text-xl font-bold pt-28 pb-10">Login</span>
+    <span class="text-xl font-bold pt-14 pb-10">Login</span>
     <form class="flex flex-col gap-6 ">
         <div class="flex flex-col">
             <label for="email">Email</label>
@@ -14,5 +14,11 @@
             <input  name="password" type="password" class="border rounded h-12"/>
         </div>
         <button class="bg-black text-white h-12">Sign in</button>
+        <div class="flex items-center justify-center my-4">
+            <div class="flex-grow border-t border-gray-300"></div>
+            <span class="px-4 text-gray-500">or</span>
+            <div class="flex-grow border-t border-gray-300"></div>
+        </div>
+        <button class="bg-black text-white h-12">Create account</button>
     </form>
 </div>
