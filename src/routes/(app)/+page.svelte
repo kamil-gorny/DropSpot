@@ -1,9 +1,9 @@
 <script lang="ts">
-    import Navigation from "../lib/components/Navigation.svelte";
-    import ProductTile from "../lib/components/ProductTile.svelte";
+    import Navigation from "$lib/components/Navigation.svelte";
+    import ProductTile from "$lib/components/ProductTile.svelte";
     import { onMount } from 'svelte';
     import { GetProducts } from "$lib/services/product-service";
-    import type {Product} from "../models/Product";
+    import type {Product} from "../../models/Product";
 
 
     let products : Product[] = [];
