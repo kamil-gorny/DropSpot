@@ -19,6 +19,9 @@
             <span class="px-4 text-gray-500">or</span>
             <div class="flex-grow border-t border-gray-300"></div>
         </div>
-        <button class="bg-black text-white h-12">Create account</button>
+
+            <button class="bg-black text-white h-12">
+                <a href="/signup">Create account</a></button>
+
     </form>
 </div>
