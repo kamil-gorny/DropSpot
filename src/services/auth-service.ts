@@ -1,5 +1,6 @@
 import { writable } from 'svelte/store';
 import { PUBLIC_API_URL } from '$env/static/public';
+import { goto } from '$app/navigation';
 type User = {
     email: string;
     token: string;
@@ -18,7 +19,7 @@ type TokenResponse = {
 export const tokenStore = writable<TokenResponse | null>(null);
 
 export const login  = async (loginRequest : LoginRequest)=> {
-    const url = `${PUBLIC_API_URL}/auth/login`;
+    const url = `${PUBLIC_API_URL}/identity/login`;
     const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -28,7 +29,10 @@ export const login  = async (loginRequest : LoginRequest)=> {
     });
     if (response.ok) {
         const data: TokenResponse = await response.json();
+        console.log(data);
         tokenStore.set(data);
+        await goto("/");
+
     }
 };
 
