@@ -1,26 +1,15 @@
 <script>
+    import {login} from "../../../services/auth-service.ts";
     let email = "";
     let password = "";
-    const url = "http://localhost:5170/api/identity/login";
-    async function handleLogin() {
-        console.log(JSON.stringify({ email, password }))
-        const response = await fetch(url, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ email, password })
-        });
-        if (response.ok) {
 
-        } else {
-
-        }
-    }
 </script>
 <div class="max-w-md mr-auto ml-auto h-screen flex flex-col">
     <span class="text-xl font-bold pt-14 pb-10">Login</span>
-    <form on:submit|preventDefault={handleLogin} class="flex flex-col gap-6 ">
+    <form on:submit|preventDefault={login({
+        email: email,
+        password: password
+    })} class="flex flex-col gap-6 ">
         <div class="flex flex-col">
             <label for="email">Email</label>
             <input name="email" bind:value={email} type="text" class="border rounded h-12"/>
